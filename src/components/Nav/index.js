@@ -5,15 +5,15 @@ function Nav(props) {
   const {
     categories = [],
     setCurrentCategory,
-    currentCategory,
     contactSelected,
-    setContactSelected
+    currentCategory,
+    setContactSelected,
   } = props;
 
   useEffect(() => {
     document.title = capitalizeFirstLetter(currentCategory.name);
   }, [currentCategory]);
-  
+
   return (
     <header className="flex-row px-1">
       <h2>
@@ -40,7 +40,7 @@ function Nav(props) {
             >
               <span
                 onClick={() => {
-                  setCurrentCategory(category)
+                  setCurrentCategory(category);
                   setContactSelected(false);
                 }}
               >
