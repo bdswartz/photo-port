@@ -11,7 +11,8 @@ describe('About component', () => {
       render(<About />);
     }); 
     // Second Test
-    it('matches snapshot DOM node structure', () => {
-        // render About
-      });
+    it('matches snapshot', () => {
+      const { asFragment } = render(<About/>)
+      expect(asFragment()).toMatchSnapshot()
+    })
   })
